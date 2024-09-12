@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Comparator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #differences {
+            list-style-type: none;
+            padding: 0;
+        }
+        #differences li {
+            background-color: #f0f0f0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        #loader {
+            display: none;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+<h1>Comparer deux fichiers Excel</h1>
+
+<button id="selectFile1">Sélectionner le fichier 1</button>
+<span id="file1">Aucun fichier sélectionné</span>
+<br><br>
+
+<button id="selectFile2">Sélectionner le fichier 2</button>
+<span id="file2">Aucun fichier sélectionné</span>
+<br><br>
+
+<button id="compareBtn">Comparer les fichiers</button>
+
+<div id="loader">
+    <img src="loader.gif" alt="Chargement..." style="width: 50px;">
+</div>
+
+<button id="exportExcelBtn" style="display:none;">Exporter vers Excel</button>
+
+<h2>Résultat des différences :</h2>
+<ul id="differences"></ul>
+
+<footer>
+    &copy; 2024 AmsifAt
+</footer>
+
+<script src="renderer.js"></script>
+</body>
+</html>

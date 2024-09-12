@@ -1,0 +1,23 @@
+{
+  "name": "excel-comparer",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.amsifat.excelcomparer",
+    "productName": "Excel Comparator",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
